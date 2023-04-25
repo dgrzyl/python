@@ -230,13 +230,23 @@ def ai_logic(board):
             board[row_val][col_val] = current_player
             break
 
+def getName():
+    while True:
+        player_name = input('Player name: ')
 
+        if player_name.strip() != '':
+            break
+        
+        if player_name.strip() == '':
+            print("Player name cannot be empty!\n")
+
+    return player_name
 
 # Running game
 print('Welcome to a TicTacToe vs AI game by dgrzyl!')
 print(40*'*')
 ti.sleep(1)
-player_name = input('Player name: ')
+getName()
 print(40*'*')
 ti.sleep(2)
 
