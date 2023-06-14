@@ -1,5 +1,8 @@
 # US-Poland units calculator by dgrztl
 
+import time
+
+# This function prints menu
 def printMainMenu():
     menu_options = [
         "1) Celsius to Fahrenheit",
@@ -13,6 +16,7 @@ def printMainMenu():
     print("\n".join(menu_options))
 
 
+# Those functions calculate units
 def celsfahrCalculator():
     print("Choose what you want to calculate: (type 1-2)")
     print("1) Celsius to Fahrenheit")
@@ -22,10 +26,12 @@ def celsfahrCalculator():
         cels = input("Give celsius value to calculate>> ")
         answ = float(cels) * (9 / 5) + 32
         print(f"Result is {round(answ, 3)} degrees Fahrenheit")
+        time.sleep(3)
     elif usr_input == "2":
         fahr = input("Give fahrenheit value to calculate>> ")
         answ = (float(fahr) - 32) * (5 / 9) 
         print(f"Result is {round(answ, 3)} degrees Celsius")
+        time.sleep(3)
     else:
         print("Wrong value!")
 
@@ -38,10 +44,12 @@ def litgalCalculator():
         lit = input("Give liters value to calculate>> ")
         answ = float(lit) * 0.2641720524
         print(f"Result is {round(answ, 3)} gallons")
+        time.sleep(3)
     elif usr_input == "2":
         gal = input("Give gallons value to calculate>> ")
         answ = float(gal) * 3.785411784
         print(f"Result is {round(answ, 3)} liters")
+        time.sleep(3)
     else:
         print("Wrong value!")
 
@@ -54,10 +62,12 @@ def metfeetCalculator():
         met = input("Give meters value to calculate>> ")
         answ = float(met) * 3.280839895
         print(f"Result is {round(answ, 3)} feet")
+        time.sleep(3)
     elif usr_input == "2":
         fet = input("Give feet value to calculate>> ")
         answ = float(fet) * 0.3048
         print(f"Result is {round(answ, 3)} meters")
+        time.sleep(3)
     else:
         print("Wrong value!")
 
@@ -70,10 +80,12 @@ def kilmilCalculator():
         kil = input("Give kilometers value to calculate>> ")
         answ = float(kil) * (1 / 1.609344)
         print(f"Result is {round(answ, 3)} miles")
+        time.sleep(3)
     elif usr_input == "2":
         mil = input("Give miles value to calculate>> ")
         answ = float(mil) * (1 * 1.609344)
         print(f"Result is {round(answ, 3)} kilometers")
+        time.sleep(3)
     else:
         print("Wrong value!")
 
@@ -86,10 +98,12 @@ def kilpouCalculator():
         kilg = input("Give kilograms value to calculate>> ")
         answ = float(kilg) * 2.20462262185
         print(f"Result is {round(answ, 3)} pounds")
+        time.sleep(3)
     elif usr_input == "2":
         pou = input("Give pounds value to calculate>> ")
         answ = float(pou) * 0.45359237
         print(f"Result is {round(answ, 3)} kilograms")
+        time.sleep(3)
     else:
         print("Wrong value!")
 
@@ -102,16 +116,18 @@ def grmoncCalculator():
         grm = input("Give grams value to calculate>> ")
         answ = float(grm) * 0.03527396195
         print(f"Result is {round(answ, 3)} ounces")
+        time.sleep(3)
     elif usr_input == "2":
         onc = input("Give ounces value to calculate>> ")
         answ = float(onc) * 28.34952
         print(f"Result is {round(answ, 3)} grams")
+        time.sleep(3)
     else:
         print("Wrong value!")
 
+# This function is resposible for running program 
 def programRunning():
     while True:
-        print("#" * 45)
         printMainMenu()
         usr_input = input("Type here (or 'q' to quit)>> ")
         if usr_input == "q":
@@ -136,6 +152,7 @@ def programRunning():
         elif usr_input == "6":
             grmoncCalculator()
 
+# Main function
 def main():
     print("#" * 45)
     print("\nWELCOME TO US-POL UNITS CALCULATOR BY DGRZYL\n")
