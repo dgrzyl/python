@@ -1,5 +1,5 @@
 # US-Poland units calculator by dgrztl
-import math
+
 
 print("#"* 40)
 print("")
@@ -98,6 +98,22 @@ def kilpouCalculator():
     else:
         print("Wrong value!")
 
+def grmoncCalculator():
+    print("Choose what you want to calculate: (type 1-2)")
+    print("1) Grams to Ounces")
+    print("2) Ounces to Grams")
+    usr_input = input("Type here>> ")
+    if usr_input == "1":
+        grm = input("Give grams value to calculate>> ")
+        answ = float(grm) * 0.03527396195
+        print(f"Result is {round(answ, 3)} ounces")
+    elif usr_input == "2":
+        onc = input("Give ounces value to calculate>> ")
+        answ = float(onc) * 28.34952
+        print(f"Result is {round(answ, 3)} grams")
+    else:
+        print("Wrong value!")
+
 def programRunning():
     usr_input = input("Type here>> ")
     if usr_input == "1":
@@ -110,6 +126,12 @@ def programRunning():
         kilmilCalculator()
     elif usr_input == "5": 
         kilpouCalculator()
+    elif usr_input == "6":
+        grmoncCalculator()
+    elif usr_input == "":
+        print('Invalid input! Cannot be empty')
+    else:
+        print("Wrong input! Type numer 1-6")
     
 
 printMainMenu()
