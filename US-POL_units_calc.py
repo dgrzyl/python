@@ -25,12 +25,28 @@ def celsfahrCalculator():
     usr_input = input("Type here>> ")
     if usr_input == "1":
         cels = input("Give celsius value to calculate>> ")
-        answ = int(cels) * (9 / 5) + 32
-        print(f"Result is {answ} degrees Fahrenheit")
+        answ = float(cels) * (9 / 5) + 32
+        print(f"Result is {round(answ, 3)} degrees Fahrenheit")
     elif usr_input == "2":
         fahr = input("Give fahrenheit value to calculate>> ")
-        answ = (int(fahr) - 32) * (5 / 9) 
-        print(f"Result is {answ} degrees Celsius")
+        answ = (float(fahr) - 32) * (5 / 9) 
+        print(f"Result is {round(answ, 3)} degrees Celsius")
+    else:
+        print("Wrong value!")
+
+def litgalCalculator():
+    print("Choose what you want to calculate: (type 1-2)")
+    print("1) Liters to Gallons")
+    print("2) Gallons to Liters")
+    usr_input = input("Type here>> ")
+    if usr_input == "1":
+        lit = input("Give liters value to calculate>> ")
+        answ = float(lit) * 0.2641720524
+        print(f"Result is {round(answ, 3)} gallons")
+    elif usr_input == "2":
+        gal = input("Give gallons value to calculate>> ")
+        answ = float(gal) * 3.785411784
+        print(f"Result is {round(answ, 3)} liters")
     else:
         print("Wrong value!")
 
@@ -39,7 +55,8 @@ def programRunning():
     if usr_input == "1":
         celsfahrCalculator()
     elif usr_input == "2":
-        print('')
+        litgalCalculator()
+    
 
 
 printMainMenu()
