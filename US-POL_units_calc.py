@@ -1,21 +1,16 @@
 # US-Poland units calculator by dgrztl
 
-
-print("#"* 40)
-print("")
-print("WELCOME TO UNITS CALCULATOR BY DGRZYL")
-print("")
-print("#"* 40)
-print("")
-
 def printMainMenu():
-    print("Choose what units you want to calculate: (type 1-7)")
-    print("1) Celsius to Fahrenheit")
-    print("2) Liters to Gallons")
-    print("3) Meters to Feet")
-    print("4) Kilometers to Miles")
-    print("5) Kilograms to Pounds")
-    print("6) Grams to Ounces")
+    menu_options = [
+        "1) Celsius to Fahrenheit",
+        "2) Liters to Gallons",
+        "3) Meters to Feet",
+        "4) Kilometers to Miles",
+        "5) Kilograms to Pounds",
+        "6) Grams to Ounces"
+    ]
+    print("Choose what units you want to calculate: (type 1-6)")
+    print("\n".join(menu_options))
 
 
 def celsfahrCalculator():
@@ -115,24 +110,36 @@ def grmoncCalculator():
         print("Wrong value!")
 
 def programRunning():
-    usr_input = input("Type here>> ")
-    if usr_input == "1":
-        celsfahrCalculator()
-    elif usr_input == "2":
-        litgalCalculator()
-    elif usr_input == "3":
-        metfeetCalculator()
-    elif usr_input == "4":
-        kilmilCalculator()
-    elif usr_input == "5": 
-        kilpouCalculator()
-    elif usr_input == "6":
-        grmoncCalculator()
-    elif usr_input == "":
-        print('Invalid input! Cannot be empty')
-    else:
-        print("Wrong input! Type numer 1-6")
-    
+    while True:
+        print("#" * 45)
+        printMainMenu()
+        usr_input = input("Type here (or 'q' to quit)>> ")
+        if usr_input == "q":
+            break
+        elif usr_input == "":
+            print('Invalid input! Cannot be empty')
+            continue
+        elif usr_input not in ["1", "2", "3", "4", "5", "6"]:
+            print("Wrong input! Type a number from 1 to 6")
+            continue
 
-printMainMenu()
-programRunning()
+        if usr_input == "1":
+            celsfahrCalculator()
+        elif usr_input == "2":
+            litgalCalculator()
+        elif usr_input == "3":
+            metfeetCalculator()
+        elif usr_input == "4":
+            kilmilCalculator()
+        elif usr_input == "5":
+            kilpouCalculator()
+        elif usr_input == "6":
+            grmoncCalculator()
+
+def main():
+    print("#" * 45)
+    print("\nWELCOME TO US-POL UNITS CALCULATOR BY DGRZYL\n")
+    print("#" * 45)
+    programRunning()
+
+main()
