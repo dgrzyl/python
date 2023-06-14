@@ -50,14 +50,67 @@ def litgalCalculator():
     else:
         print("Wrong value!")
 
+def metfeetCalculator():
+    print("Choose what you want to calculate: (type 1-2)")
+    print("1) Meters to Feet")
+    print("2) Feet to Meters")
+    usr_input = input("Type here>> ")
+    if usr_input == "1":
+        met = input("Give meters value to calculate>> ")
+        answ = float(met) * 3.280839895
+        print(f"Result is {round(answ, 3)} feet")
+    elif usr_input == "2":
+        fet = input("Give feet value to calculate>> ")
+        answ = float(fet) * 0.3048
+        print(f"Result is {round(answ, 3)} meters")
+    else:
+        print("Wrong value!")
+
+def kilmilCalculator():
+    print("Choose what you want to calculate: (type 1-2)")
+    print("1) Kilometers to Miles")
+    print("2) Miles to Kilometers")
+    usr_input = input("Type here>> ")
+    if usr_input == "1":
+        kil = input("Give kilometers value to calculate>> ")
+        answ = float(kil) * (1 / 1.609344)
+        print(f"Result is {round(answ, 3)} miles")
+    elif usr_input == "2":
+        mil = input("Give miles value to calculate>> ")
+        answ = float(mil) * (1 * 1.609344)
+        print(f"Result is {round(answ, 3)} kilometers")
+    else:
+        print("Wrong value!")
+
+def kilpouCalculator():
+    print("Choose what you want to calculate: (type 1-2)")
+    print("1) Kilograms to Pounds")
+    print("2) Pounds to Kilograms")
+    usr_input = input("Type here>> ")
+    if usr_input == "1":
+        kilg = input("Give kilograms value to calculate>> ")
+        answ = float(kilg) * 2.20462262185
+        print(f"Result is {round(answ, 3)} pounds")
+    elif usr_input == "2":
+        pou = input("Give pounds value to calculate>> ")
+        answ = float(pou) * 0.45359237
+        print(f"Result is {round(answ, 3)} kilograms")
+    else:
+        print("Wrong value!")
+
 def programRunning():
     usr_input = input("Type here>> ")
     if usr_input == "1":
         celsfahrCalculator()
     elif usr_input == "2":
         litgalCalculator()
+    elif usr_input == "3":
+        metfeetCalculator()
+    elif usr_input == "4":
+        kilmilCalculator()
+    elif usr_input == "5": 
+        kilpouCalculator()
     
-
 
 printMainMenu()
 programRunning()
