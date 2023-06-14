@@ -78,13 +78,38 @@ def switchPlayer():
         current_player_name = player1_name
 
 
+def getName_1():
+    while True:
+        player1_name = input('Player 1 name: ')
+
+        if player1_name.strip() != '':
+            break
+        
+        if player1_name.strip() == '':
+            print("Player name cannot be empty!\n")
+
+    return player1_name
+
+def getName_2():
+    while True:
+        player2_name = input('Player 2 name: ')
+
+        if player2_name.strip() != '':
+            break
+        
+        if player2_name.strip() == '':
+            print("Player name cannot be empty!\n")
+
+    return player2_name
+
+
 # Running game
 print('Welcome to a TicTacToe game by dgrzyl!')
 print(40*'*')
 ti.sleep(2)
-player1_name = input('Player 1 name: ')
+player1_name = getName_1()
 ti.sleep(1)
-player2_name = input('Player 2 name: ')
+player2_name = getName_2()
 ti.sleep(2)
 current_player_name = player1_name
 while gameRunning:
