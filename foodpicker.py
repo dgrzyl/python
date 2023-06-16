@@ -10,8 +10,22 @@ def productAdd():
         else:
             break
 
+def readFood():
+    global meals
+    global ingredients
 
+    with open('meals.txt', 'r') as food:
+        meals = food.readlines()
+        meals = [meal.strip() for meal in meals]
+    
+    with open('ingredients.txt', 'r') as ing:
+        ingredients = ing.readlines()
+        ingredients = [ingredients.strip() for ingredients in ingredients]
+        return meals, ingredients
 
+readFood()
+print(meals, ingredients)
+        
 
 # productAdd()
 # print(products_list)
