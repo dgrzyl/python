@@ -7,6 +7,8 @@ def productAdd():
         product = input("Podaj produkty z lodówki(wpisz f aby zakończyć wprowadzanie produktów)>> ").lower()
         if product != "f":
             products_list.append(product)
+        elif product == "":
+            continue
         else:
             break
 
