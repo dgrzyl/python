@@ -4,7 +4,7 @@ products_list = []
 
 def productAdd():
     while True:
-        product = input("Podaj produkty z lodówki (wpisz 'f', aby zakończyć wprowadzanie produktów)>> ").lower()
+        product = input("Podaj produkty z lodówki(wpisz f aby zakończyć wprowadzanie produktów)>> ").lower()
         if product != "f":
             products_list.append(product)
         elif product == "":
@@ -13,15 +13,23 @@ def productAdd():
             break
 
 def readFood():
-    with open('meals.txt', 'r') as food:
-        meals = [meal.strip() for meal in food.readlines()]
+    global meals
+    global ingredients
 
-    with open('ingredients.txt', 'r') as ing:
-        ingredients = [line.strip().split(',') for line in ing.readlines()]
+    with open('meals.txt', 'r') as food:
+        meals = food.readlines()
+        meals = [meal.strip() for meal in meals]
+
     
-    return meals, ingredients
+    with open('ingredients.txt', 'r') as ing:
+        ingredients = ing.readlines()
+        ingredients = [ingredients.strip() for ingredients in ingredients]
+        for i in range(len(ingredients)):
+            ingredients[i] = [x.strip() for x in ingredients[i].split(',')]
+        return meals, ingredients
 
 def foodCompare(meals, ingredients, products_list):
+    global prop
     prop = []
     products_set = set(products_list)
     for i in range(len(meals)):
@@ -31,10 +39,11 @@ def foodCompare(meals, ingredients, products_list):
 
 def main():
     productAdd()
-    meals, ingredients = readFood()
-    prop = foodCompare(meals, ingredients, products_list)
-    print(prop)
+    readFood()
+    foodCompare(meals, ingredients, products_list)
+    print("Potrawy, które możesz zrobić to:")
+    for i in prop:
+        print(i)
 
 main()
-
 
