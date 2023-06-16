@@ -17,17 +17,23 @@ def readFood():
     with open('meals.txt', 'r') as food:
         meals = food.readlines()
         meals = [meal.strip() for meal in meals]
+
     
     with open('ingredients.txt', 'r') as ing:
         ingredients = ing.readlines()
         ingredients = [ingredients.strip() for ingredients in ingredients]
+        for i in range(len(ingredients)):
+            ingredients[i] = [x.strip() for x in ingredients[i].split(',')]
         return meals, ingredients
 
 def foodCompare(meals, ingredients, products_list):
     prop = []
-    
+    for i in range(len(meals)):
+        
 
-productAdd()
+#productAdd()
 readFood()
-foodCompare(meals, ingredients, products_list)
+#foodCompare(meals, ingredients, products_list)
 
+print(meals)
+print(ingredients)
