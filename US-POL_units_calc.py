@@ -129,7 +129,7 @@ def grmoncCalculator():
 def programRunning():
     while True:
         printMainMenu()
-        usr_input = input("Type here (or 'q' to quit)>> ")
+        usr_input = input("Type here (or 'q' to quit)>> ").lower()
         if usr_input == "q":
             break
         elif usr_input == "":
