@@ -4,7 +4,7 @@ products_list = []
 
 def productAdd():
     while True:
-        product = input("Podaj produkty z lodówki: (wpisz f aby zakończyć wprowadzanie produktów)").lower()
+        product = input("Podaj produkty z lodówki(wpisz f aby zakończyć wprowadzanie produktów)>> ").lower()
         if product != "f":
             products_list.append(product)
         else:
@@ -23,9 +23,11 @@ def readFood():
         ingredients = [ingredients.strip() for ingredients in ingredients]
         return meals, ingredients
 
-readFood()
-print(meals, ingredients)
-        
+def foodCompare(meals, ingredients, products_list):
+    prop = []
+    
 
-# productAdd()
-# print(products_list)
+productAdd()
+readFood()
+foodCompare(meals, ingredients, products_list)
+
