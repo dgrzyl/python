@@ -27,13 +27,19 @@ def readFood():
         return meals, ingredients
 
 def foodCompare(meals, ingredients, products_list):
+    global prop
     prop = []
+    products_set = set(products_list)
     for i in range(len(meals)):
-        
+        if set(ingredients[i]).issubset(products_set):
+            prop.append(meals[i])
+    return prop
 
-#productAdd()
-readFood()
-#foodCompare(meals, ingredients, products_list)
+def main():
+    productAdd()
+    readFood()
+    foodCompare(meals, ingredients, products_list)
+    print(prop)
 
-print(meals)
-print(ingredients)
+main()
+
