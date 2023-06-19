@@ -1,3 +1,29 @@
 jajecznica
 tosty z serem
 nalesniki
+omlet
+tosty francuskie
+bajgle
+hot dogi
+burgery premium
+burger
+cheeseburger
+pizza margherita
+pizza capriciosa
+pizza salami
+pizza z szynka
+ciasto na pizze
+puree special
+puree
+jajka sadzone na oliwie
+jajka sadzone na masle
+spaghetti
+nuggetsy
+frytki
+pieczone bataty
+zapiekanki z serem i pieczarkami
+zapiekanki z serem i szynka
+zapiekanki z serem
+zapiekanki z serem szynka i pieczarkami
+kotlet schabowy z bulki tartej
+kotlet schabowy z platkow

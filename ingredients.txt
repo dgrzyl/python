@@ -1,3 +1,29 @@
-jajka
-chleb tostowy, ser
-mleko, maka, jajka, woda gazowana, maslo
+jajka, maslo
+chleb, ser
+mleko, maka, jajka, maslo
+jajka, mleko, maslo
+chleb, jajka
+bajgle, jajka, ser, salata, sos, bekon
+bulki do hot dogow, parowki, sos
+bulki, mieso, ser, salata, bekon, ogorek, sos
+bulki, mieso, ser, salata, sos
+bulki, mieso, ser, sos
+ciasto na pizze, passata, ser, sos
+ciasto na pizze, passata, ser, pieczarki, sos
+ciasto na pizze, passata, ser, salami, sos
+ciasto na pizze, passata, ser, szynka, sos
+drozdze, maka, cukier, oliwa z oliwek
+ziemniaki, smietana, majonez, mleko, maslo
+ziemniaki
+jajka, oliwa z oliwek
+jajka, maslo
+makaron, oliwa z oliwek, czosnek, cebula, parmezan, passata
+mieso, jajka, platki kukurydziane, mleko
+ziemniaki
+bataty
+bulki, ser, pieczarki
+bulki, ser, szynka
+bulki, ser
+bulki, ser, szynka, pieczarki
+mieso, jajka, mleko, bulka tarta
+mieso, jajka, mleko, platki kukurydziane

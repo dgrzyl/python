@@ -1,4 +1,5 @@
 # Foodpicker - program do podpowiadania co możesz zjeść na podstawie rzeczy w Twojej lodówce
+import time
 
 products_list = []
 
@@ -38,12 +39,22 @@ def foodCompare(meals, ingredients, products_list):
     return prop
 
 def main():
+    print('#' * 85)
+    print('')
+    print('Witaj w programie foodpicker! Ten program podpowie Ci co możesz zrobić do jedzenia!')
+    print('')
+    print('#' * 85)
+    time.sleep(3)
+    print('INFO: Wpisuj produkty pojedyńczo! Nie używaj polskich znaków oraz przecinków! Wielkość liter dowolna. Przykładowo wpisz: jajka lub oliwa z oliwek i naciśnij enter')
+    time.sleep(3)
     productAdd()
     readFood()
     foodCompare(meals, ingredients, products_list)
     print("Potrawy, które możesz zrobić to:")
+    time.sleep(1)
     for i in prop:
-        print(i)
+        print("-", i)
+        time.sleep(0.5)
 
 main()
 
