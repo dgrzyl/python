@@ -19,23 +19,31 @@ TRACK = pygame.transform.scale(TRACK, (768, 576))
 CAR1 = pygame.image.load(os.path.join('Assets', 'car1.png'))
 CAR1 = pygame.transform.scale(CAR1, (58, 32))
 
-#CAR1_SOUND = pygame.mixer.Sound(os.path.join('Assets', 'engine-6000.mp3'))
+#CAR1_SOUND = pygame.mixer.Sound('Assets/engine-6000.wav')
 
 CAR2 = pygame.image.load(os.path.join('Assets', 'car2.png'))
 CAR2 = pygame.transform.scale(CAR2, (58, 32))
 
-def draw_window(car1, angle1):
+def draw_window(car1, angle1, car2, angle2):
     WIN.fill(BACKGROUND_COLOR)
     rotated_car1 = pygame.transform.rotate(CAR1, angle1)
+    rotated_car2 = pygame.transform.rotate(CAR2, angle2)
     car1_center = car1.center
+    car2_center = car2.center
     rotated_rect = rotated_car1.get_rect(center=car1_center)
+    rotated_rect2 = rotated_car2.get_rect(center=car2_center)
     WIN.blit(TRACK, (100, 10))
     WIN.blit(rotated_car1, rotated_rect.topleft)
+    WIN.blit(rotated_car2, rotated_rect2.topleft)
     pygame.display.update()
 
+
 def main():
-    car1 = pygame.Rect(500, 300, 58, 32)
-    angle1 = 0  # Initial rotation angle
+    #pygame.mixer.init()  # Initialize the audio mixer
+    car1 = pygame.Rect(370, 280, 58, 32)
+    car2 = pygame.Rect(400, 240, 72, 33.51)
+    angle1 = -35  # Initial rotation angle
+    angle2 = 145
     clock = pygame.time.Clock()
     run = True
     while run:
@@ -50,12 +58,21 @@ def main():
         if key_pressed[pygame.K_a]:
             angle1 += ROTATION_ANGLE
 
+        if key_pressed[pygame.K_RIGHT]:
+            angle2 -= ROTATION_ANGLE
+        if key_pressed[pygame.K_LEFT]:
+            angle2 += ROTATION_ANGLE
+
         # Convert the rotation angle to radians
         rad_angle = math.radians(angle1)
+        rad_angle2 = math.radians(angle2)
 
         # Calculate the velocity components based on the rotation angle
         dx = VEL * math.cos(rad_angle)
         dy = VEL * math.sin(rad_angle)
+
+        fx = VEL * math.cos(rad_angle2)
+        fy = VEL * math.sin(rad_angle2)
 
         if key_pressed[pygame.K_s]:
             car1.x += dx
@@ -65,7 +82,15 @@ def main():
             car1.y += dy
             #CAR1_SOUND.play()
 
-        draw_window(car1, angle1)
+        if key_pressed[pygame.K_UP]:
+            car2.x += fx
+            car2.y -= fy
+        if key_pressed[pygame.K_DOWN]:
+            car2.x -= fx
+            car2.y += fy
+            #CAR1_SOUND.play()
+
+        draw_window(car1, angle1, car2, angle2)
 
     pygame.quit()
 
