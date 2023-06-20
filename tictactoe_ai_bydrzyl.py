@@ -246,7 +246,7 @@ def getName():
 print('Welcome to a TicTacToe vs AI game by dgrzyl!')
 print(40*'*')
 ti.sleep(1)
-getName()
+player_name = getName()
 print(40*'*')
 ti.sleep(2)
 

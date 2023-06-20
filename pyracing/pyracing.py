@@ -9,6 +9,7 @@ pygame.display.set_caption('Pyracing')
 
 BACKGROUND_COLOR = (3, 252, 132)
 
+
 FPS = 60
 VEL = 3.6
 ROTATION_ANGLE = 2.2  # The angle by which the car rotates
