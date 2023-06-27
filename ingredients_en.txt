@@ -1,0 +1,27 @@
+eggs, butter
+bread, cheese
+milk, flour, eggs, butter
+eggs, milk, butter
+bread, eggs
+bagels, eggs, cheese, lettuce, sauce, bacon
+hot dog buns, sausages, sauce
+buns, meat, cheese, lettuce, bacon, cucumber, sauce
+buns, meat, cheese, lettuce, sauce
+buns, meat, cheese, sauce
+pizza dough, tomato sauce, cheese, sauce
+pizza dough, tomato sauce, cheese, mushrooms, sauce
+pizza dough, tomato sauce, cheese, salami, sauce
+pizza dough, tomato sauce, cheese, ham, sauce
+yeast, flour, sugar, olive oil
+potatoes, sour cream, mayonnaise, milk, butter
+potatoes
+eggs, olive oil
+eggs, butter
+pasta, olive oil, garlic, onion, Parmesan cheese, tomato sauce
+meat, eggs, cornflakes, milk
+potatoes
+sweet potatoes
+buns, cheese, mushrooms
+buns, cheese, ham
+buns, cheese
+buns, cheese, ham, mushrooms
