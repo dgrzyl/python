@@ -249,7 +249,6 @@ ti.sleep(1)
 player_name = getName()
 print(40*'*')
 ti.sleep(2)
-
 while gameRunning:
     printboard(board)
     playerinput(board)
